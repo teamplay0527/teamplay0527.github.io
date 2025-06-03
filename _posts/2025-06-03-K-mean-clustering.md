@@ -2,9 +2,9 @@
 
 추천주제 : K-Mean Clustering : 역사, 원리, 실용 사례
 
-- 하임경(limkyoung.ha@lge.com)  
-- 정한영(hanyoung1.jeoung@lge.com)  
-- 엄정훈(junghoon.um@lge.com)
+- **하임경**(limkyoung.ha@lge.com)  
+- **정한영**(hanyoung1.jeoung@lge.com)  
+- **엄정훈**(junghoon.um@lge.com)  
 
 ---
 주제선정이유 : 비지도 학습 중 가장 많이 쓰이는 알고리즘 중 하나, 개념이 단순해 설명하기 좋음.
@@ -117,14 +117,14 @@ K-평균 군집화의 개념과 역사 , 알고리즘 원리 , 실용사례 등�
 k-means clustering - Wikipedia  
 [https://en.wikipedia.org/wiki/K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)  
 K-Means Clustering for Machine Learning Explained  
-https://www.deeplearning.ai/the-batch/k-means-clustering-group-think/  
+[https://www.deeplearning.ai/the-batch/k-means-clustering-group-think/](https://www.deeplearning.ai/the-batch/k-means-clustering-group-think/)  
 K-Means Clustering Explained  
-https://neptune.ai/blog/k-means-clustering  
+[https://neptune.ai/blog/k-means-clustering](https://neptune.ai/blog/k-means-clustering)  
 Customer Segmentation using KMeans in R | GeeksforGeeks  
-https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/  
+[https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/](https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/)  
 Iris flower data set - Wikipedia  
-https://en.wikipedia.org/wiki/Iris_flower_data_set  
+[https://en.wikipedia.org/wiki/Iris_flower_data_set](https://en.wikipedia.org/wiki/Iris_flower_data_set)  
 From Data to Insights: Segmenting Airbnb’s Supply | by Alexandre Salama | The Airbnb Tech Blog | Medium  
-https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399  
+[https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399](https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399)  
 Uber trip segmentation using K-means clustering  
-https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp  
+[https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp](https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp)  
