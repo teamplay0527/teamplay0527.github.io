@@ -113,18 +113,18 @@ K-평균은 데이터를 **K개의 그룹(클러스터)**로 나누어, 각 그�
 
 ※ 참고자료
 
-K-평균 군집화의 개념과 역사 , 알고리즘 원리 , 실용사례 등을 참고하였다.
-k-means clustering - Wikipedia
-https://en.wikipedia.org/wiki/K-means_clustering
-K-Means Clustering for Machine Learning Explained
-https://www.deeplearning.ai/the-batch/k-means-clustering-group-think/
-K-Means Clustering Explained
-https://neptune.ai/blog/k-means-clustering
-Customer Segmentation using KMeans in R | GeeksforGeeks
-https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/
-Iris flower data set - Wikipedia
-https://en.wikipedia.org/wiki/Iris_flower_data_set
-From Data to Insights: Segmenting Airbnb’s Supply | by Alexandre Salama | The Airbnb Tech Blog | Medium
-https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399
-Uber trip segmentation using K-means clustering
-https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp
+K-평균 군집화의 개념과 역사 , 알고리즘 원리 , 실용사례 등을 참고하였다.  
+k-means clustering - Wikipedia  
+[https://en.wikipedia.org/wiki/K-means_clustering](https://en.wikipedia.org/wiki/K-means_clustering)  
+K-Means Clustering for Machine Learning Explained  
+https://www.deeplearning.ai/the-batch/k-means-clustering-group-think/  
+K-Means Clustering Explained  
+https://neptune.ai/blog/k-means-clustering  
+Customer Segmentation using KMeans in R | GeeksforGeeks  
+https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/  
+Iris flower data set - Wikipedia  
+https://en.wikipedia.org/wiki/Iris_flower_data_set  
+From Data to Insights: Segmenting Airbnb’s Supply | by Alexandre Salama | The Airbnb Tech Blog | Medium  
+https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399  
+Uber trip segmentation using K-means clustering  
+https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp  
