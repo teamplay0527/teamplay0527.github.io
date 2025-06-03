@@ -22,12 +22,6 @@ K-평균 클러스터링은 1950년대 중반에 등장한 오래된 알고리�
 - **에드워드 포기 (Edward Forgy)**: 1965년 유사 알고리즘 발표  
 - **제임스 맥퀸 (James MacQueen)**: 1967년 “K-평균” 명칭 최초 사용  
 
-> 📸 대표 인물들
-
-![후고 스타인하우스](images/hugo_steinhaus.jpg)  
-![스튜어트 로이드](images/stuart_lloyd.jpg)  
-![에드워드 포기](images/edward_forgy.jpg)
-
 ---
 
 ## 🔍 2. K-평균 클러스터링의 원리
@@ -43,22 +37,16 @@ K-평균은 데이터를 **K개의 그룹(클러스터)**로 나누어, 각 그�
 
 - 임의로 K개의 중심점을 선택합니다.
 
-![초기 중심 설정](images/kmeans_init.png)
-
 #### 2️⃣ 군집 할당 (Assignment)
 
 - 각 데이터 포인트를 가장 가까운 중심점에 할당합니다.  
 - 주로 **유클리디안 거리**를 사용합니다.
-
-![클러스터 할당](images/kmeans_assignment.png)
 
 #### 3️⃣ 중심 재계산 (Update)
 
 - 클러스터 내 데이터의 평균 위치로 중심점을 이동시킵니다.
 
 \[ \mu_i = \frac{1}{|S_i|} \sum_{x_j \in S_i} x_j \]
-
-![중심 이동](images/kmeans_update.png)
 
 #### 4️⃣ 반복 및 수렴 (Convergence)
 
@@ -99,8 +87,6 @@ K-평균은 다양한 산업에서 **고객 그룹 나누기**에 활용됩니�
 - 1936년 로널드 피셔가 소개  
 - 붓꽃의 세 품종(Sepal, Petal 길이/너비 등 4가지 특성)  
 - 각 품종별 50개, 총 150개 데이터
-
-![아이리스 데이터 시각화](images/iris_3d_kmeans.png)
 
 #### 🔎 K-평균 적용
 
