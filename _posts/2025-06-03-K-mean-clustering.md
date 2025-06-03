@@ -1,7 +1,7 @@
 # 📊 K-평균 클러스터링 완전 정복: 역사, 원리, 실용 사례
 
-- 하임경(limkyoung.ha@lge.com)
-- 정한영(hanyoung1.jeoung@lge.com)
+- 하임경(limkyoung.ha@lge.com)  
+- 정한영(hanyoung1.jeoung@lge.com)  
 - 엄정훈(junghoon.um@lge.com)
 
   자세한 보고서는 다음을 참고하세요.
