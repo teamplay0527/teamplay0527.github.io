@@ -1,4 +1,4 @@
-[PDF 보기](files/K-평균 군집화_하임경_정한영_엄정훈.pdf)
+[PDF 보기](/files/K-평균 군집화_하임경_정한영_엄정훈.pdf)
 
 추천주제 : K-Mean Clustering : 역사, 원리, 실용 사례
 
