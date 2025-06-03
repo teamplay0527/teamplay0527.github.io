@@ -95,6 +95,8 @@ K-평균은 데이터를 **K개의 그룹(클러스터)**로 나누어, 각 그�
 아이리스 데이터셋의 K-평균 군집화 예시: 3차원 산점도에서 3개의 클러스터(k=3)를 그린 결과(각 색은 서로 다른 클러
 스터) . 왼쪽 위는 클러스터 수 일 때, 오른쪽 위는 일 때 결과이며, 오른쪽 아래는 실제 정답(붓꽃 종)을 나타낸다. 인 경우 K-평균 결과가 실제 종 분포와 비교적 유사함을 알 수 있다.
 
+---
+
 (3) 최신 기업 사례
 
 최근에는 실무에서도 K-평균 군집화가 널리 활용된다. 예를 들어, Airbnb 기술팀은 호스트의 숙소 이용
@@ -105,7 +107,6 @@ K-평균은 데이터를 **K개의 그룹(클러스터)**로 나누어, 각 그�
 시간을 최소화했으며, 수요·공급 비율에 따라 동적인 요금 책정(서지 프라이싱)에도 활용하고 있다 . 이러한 사례들
 은 K-평균을 통해 복잡한 실세계 데이터를 효과적으로 분할하여 비즈니스 문제(마케팅 전략, 운영 최적화 등)를 해결한
 예들이다
-
 
 
 ---
@@ -123,8 +124,7 @@ Customer Segmentation using KMeans in R | GeeksforGeeks
 https://www.geeksforgeeks.org/customer-segmentation-using-kmeans-in-r/
 Iris flower data set - Wikipedia
 https://en.wikipedia.org/wiki/Iris_flower_data_set
-From Data to Insights: Segmenting Airbnb’s Supply | by Alexandre Salama | The Airbnb Tech Blog |
-Medium
+From Data to Insights: Segmenting Airbnb’s Supply | by Alexandre Salama | The Airbnb Tech Blog | Medium
 https://medium.com/airbnb-engineering/from-data-to-insights-segmenting-airbnbs-supply-c88aa2bb9399
 Uber trip segmentation using K-means clustering
 https://www.linkedin.com/pulse/uber-trip-segmentation-using-k-means-clustering-khatre-csm-pmp
