@@ -4,14 +4,18 @@
 - 정한영(hanyoung1.jeoung@lge.com)  
 - 엄정훈(junghoon.um@lge.com)
 
+---
 주제선정이유 : 비지도 학습 중 가장 많이 쓰이는 알고리즘 중 하나, 개념이 단순해 설명하기 좋음.
 - 장점 : 그래프와 시각적 예시가 풍부, 다양한 데이터에 쉽게 적용.
 - 활용사례 : 고객 세분화, 이미지 압축, 이상 탐지 등.
 
+---
 Category
 1. K-Mean Clustering의 역사
 2. K-Mean Clustering의 원리
-3. 실용 사례 예시  
+3. 실용 사례 예시
+
+---   
 
 
 1. K-Mean Clustering의 역사
