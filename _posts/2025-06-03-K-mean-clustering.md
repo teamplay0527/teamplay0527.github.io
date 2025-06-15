@@ -42,21 +42,26 @@ K-평균은 데이터를 **K개의 그룹(클러스터)**로 나누어, 각 그�
 
 ① 초기 중심 설정 (Initialization)
 
-- 임의로 K개의 중심점을 선택합니다.
+- 임의로 K개의 중심점을 선택합니다. (K=3)
+<img width="494" alt="초기 중심 설정" src="https://github.com/user-attachments/assets/bd7f796d-15c5-4869-bbc3-338662b7131c" />
 
 ② 군집 할당 (Assignment)
 
 - 각 데이터 포인트를 가장 가까운 중심점에 할당합니다.  
 - 주로 **유클리디안 거리**를 사용합니다.
+<img width="498" alt="군집할당" src="https://github.com/user-attachments/assets/893dbc9d-3d83-4692-b445-2f68b6ec481a" />
 
 ③ 중심 재계산 (Update)
 
 - 클러스터 내 데이터의 평균 위치로 중심점을 이동시킵니다.
-
+<img width="497" alt="중심점 재 계산" src="https://github.com/user-attachments/assets/f162b4dd-943d-46fc-9109-2fde3ff5cb31" />
 
 ④ 반복 및 수렴 (Convergence)
 
 - 중심점이 더 이상 변하지 않을 때까지 2~3단계를 반복합니다.
+<img width="497" alt="반복 및 수렴" src="https://github.com/user-attachments/assets/88664409-89fa-4514-a7dc-72e0d312de5d" />
+
+
 
 ---
 
