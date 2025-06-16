@@ -1,115 +1,78 @@
-# 📊 Airbnb 고객 세분화를 위한 K-Means Clustering
+# Uber 픽업 위치 최적화 사례 보고서
 
----
+- **하임경**(limkyoung.ha@lge.com)  
+- **정한영**(hanyoung1.jeong@lge.com)  
+- **엄정훈**(junghoon.um@lge.com)  
 
-## 📌 개요
+## 1. 개요
 
-Airbnb는 전 세계 수백만 명의 사용자 데이터를 기반으로 **K-Means Clustering**을 활용해 고객을 행동 패턴에 따라 그룹화하였습니다.
-이를 통해 맞춤형 마케팅, 추천 시스템 고도화, 신규 서비스 기획 등을 효과적으로 수행하였습니다.
+Uber는 고객의 탑승 요청 위치를 바탕으로 효율적인 드라이버 배치를 실행해야 합니다. 이를 위해 **K-평균 클러스터링(K-means clustering)** 알고리즘을 활용하여 픽업 위치 데이터를 군집화하고, 각 군집의 중심을 드라이버 대기 허브로 활용할 수 있습니다.
 
----
+이 보고서에서는 Uber의 뉴욕시 지역을 가정하여 생성한 가상의 픽업 데이터를 K-평균 클러스터링으로 분석하고, 이를 통해 **픽업 허브 위치 최적화** 과정을 설명합니다.
 
-## 🎯 문제 정의
+## 2. 데이터 설명
 
-* Airbnb 사용자들은 예약 빈도, 숙박 기간, 숙소 선호 타입 등 다양한 행동 패턴을 보입니다.
-* 개별 사용자에게 맞는 경험을 제공하려면 비슷한 특성을 가진 사용자끼리 묶어야 합니다.
-* 이를 위해 **K-Means Clustering**을 사용하여 **행동 기반 고객 세그먼트**를 자동으로 도출합니다.
+* **데이터 형식**: 위도(latitude), 경도(longitude)
+* **데이터 수**: 1,000건 (5개 중심 허브 주변 분포)
+* **출처**: 시뮬레이션된 가상 데이터
 
----
+[사용데이터](/files/uber_pickup_data.csv)
 
-## 📂 데이터와 변수 예시
+예시:
 
-Airbnb는 다음과 같은 변수를 사용했습니다:
+| latitude | longitude |
+| -------- | --------- |
+| 40.7591  | -73.9874  |
+| 40.7132  | -74.0052  |
 
-| 변수명                      | 설명                  |
-| ------------------------ | ------------------- |
-| `booking_freq`           | 연간 예약 빈도            |
-| `stay_duration`          | 평균 숙박 일수            |
-| `room_type`              | 숙소 타입 (집 전체, 개인실 등) |
-| `city_center_preference` | 도심 선호도 (0\~1)       |
-| `seasonality`            | 예약 시즌 패턴            |
+## 3. 분석 목표
 
----
+* K-평균 클러스터링을 통해 픽업 데이터를 5개 그룹으로 군집화
+* 각 군집의 중심점을 픽업 허브로 설정
+* 시각화를 통해 허브 분포 확인 및 활용 가능성 분석
 
-## ⚙️ K-Means Clustering 간략 설명
+## 4. R을 활용한 분석 코드
 
-* **K-Means Clustering**은 데이터를 K개의 그룹으로 나누어 같은 그룹 내 데이터가 서로 유사하도록 하는 비지도 학습 알고리즘입니다.
-* 클러스터 중심(centroid)을 초기화하고, 각 데이터를 가장 가까운 중심에 할당하고, 중심을 갱신하는 과정을 반복합니다.
+```r
+# 라이브러리 불러오기
+library(tidyverse)
+library(ggplot2)
 
----
+# 데이터 로딩
+data <- read.csv("uber_pickup_data.csv")
 
-## 🖥️ Python 코드 예제
+# K-평균 클러스터링 수행
+set.seed(123)
+k_result <- kmeans(data[, c("latitude", "longitude")], centers = 5)
+data$cluster <- factor(k_result$cluster)
 
-아래 코드는 가상의 Airbnb 사용자 행동 데이터를 생성하고 K-Means로 군집화한 후 시각화하는 예제입니다.
+# 클러스터 중심 추출
+centers <- as.data.frame(k_result$centers)
 
-```python
-# 필요 라이브러리 설치
-# pip install numpy pandas scikit-learn matplotlib seaborn
-
-import numpy as np
-import pandas as pd
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# --------------------------------
-# 1) 가상 Airbnb 사용자 데이터 생성
-# --------------------------------
-np.random.seed(42)
-n_users = 500
-
-data = pd.DataFrame({
-    'booking_freq': np.random.poisson(3, n_users),    # 연간 예약 빈도
-    'stay_duration': np.random.normal(5, 2, n_users), # 평균 숙박 일수
-    'room_type': np.random.choice([0, 1], n_users),   # 0: 개인실, 1: 집 전체
-    'city_center_preference': np.random.uniform(0, 1, n_users)
-})
-
-print(data.head())
-
-# --------------------------------
-# 2) 데이터 표준화
-# --------------------------------
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(data)
-
-# --------------------------------
-# 3) 최적의 K 찾기 (Elbow Method)
-# --------------------------------
-inertia = []
-K = range(1, 10)
-for k in K:
-    kmeans = KMeans(n_clusters=k, random_state=42)
-    kmeans.fit(X_scaled)
-    inertia.append(kmeans.inertia_)
-
-plt.plot(K, inertia, 'bo-')
-plt.xlabel('Number of Clusters (K)')
-plt.ylabel('Inertia')
-plt.title('Elbow Method for Optimal K')
-plt.show()
-
-# --------------------------------
-# 4) K-Means 모델 학습 및 군집화
-# --------------------------------
-kmeans = KMeans(n_clusters=3, random_state=42)
-data['cluster'] = kmeans.fit_predict(X_scaled)
-
-print(data.groupby('cluster').mean())
-
-# --------------------------------
-# 5) 시각화 (2D)
-# --------------------------------
-sns.scatterplot(
-    x='booking_freq',
-    y='stay_duration',
-    hue='cluster',
-    palette='Set2',
-    data=data
-)
-plt.title('Airbnb Customer Segmentation by K-Means')
-plt.xlabel('Booking Frequency')
-plt.ylabel('Stay Duration')
-plt.show()
+# 시각화
+ggplot(data, aes(x = longitude, y = latitude, color = cluster)) +
+  geom_point(alpha = 0.6, size = 2) +
+  geom_point(data = centers, aes(x = longitude, y = latitude),
+             color = "black", size = 5, shape = 8) +
+  labs(title = "Uber 픽업 위치의 K-평균 클러스터링", x = "경도", y = "위도") +
+  theme_minimal()
 ```
+
+## 5. 분석 결과 및 해석
+
+* 각 클러스터는 Uber가 주요 픽업 수요가 높은 지역을 식별하는 데 유용하게 작용
+* 클러스터 중심(허브)은 드라이버가 대기하기 적절한 위치를 제안함
+* 시각화 결과에서 중심은 실제 중심 좌표 근처에 형성되어, 군집화가 효과적으로 수행되었음을 알 수 있음
+
+![Uber Data 분석 결과](/images/Uber_k_meam_clustering.png)
+
+## 6. 기대 효과
+
+* **대기 시간 감소**: 수요가 높은 허브에 드라이버를 미리 배치함으로써 응답 시간 단축
+* **운영 최적화**: 동적 요금 책정(surge pricing) 시스템과 연계하여 효율적 운영 가능
+* **데이터 기반 의사결정**: 픽업 위치의 클러스터링 분석은 지역 기반 마케팅 또는 서비스 개선에 활용 가능
+
+## 7. 결론
+
+K-평균 클러스터링은 Uber와 같은 플랫폼에서 수요 예측 및 드라이버 배치 전략 수립에 매우 유용한 기법입니다.  
+본 분석은 간단한 위도/경도 데이터로부터 군집 중심을 도출하여 실시간 운영에 적용할 수 있는 기반을 제공했습니다.
