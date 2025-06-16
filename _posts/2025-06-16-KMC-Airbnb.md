@@ -31,8 +31,6 @@ Airbnb는 전 세계 숙소 데이터를 기반으로 고객에게 더 나은 �
 
 ## 4. 분석 코드
 
-아래는 Python으로 K-means Clustering을 수행하는 간단한 예시 코드입니다.
-
 ```python
 # 라이브러리 불러오기
 import pandas as pd
@@ -62,8 +60,6 @@ plt.show()
 
 ## 5. 분석 결과 및 해석
 
-아래는 K-means Clustering으로 Airbnb 숙소 데이터를 군집화한 결과입니다.
-
 ![image](https://github.com/user-attachments/assets/0d09e070-08e7-4f64-8934-ad7799d6b780)
 
 
@@ -81,7 +77,6 @@ plt.show()
 
 ## 6. 기대효과
 
-K-means Clustering 적용을 통해 얻을 수 있는 기대효과는 다음과 같습니다.
 
 - **맞춤형 검색 결과 제공:** 사용자가 원하는 가격대와 선호 지역에 맞춘 검색 필터링 기능 강화
 - **수익 극대화:** 지역별 가격대 분석을 통해 가격 정책을 최적화하고 경쟁력을 확보
