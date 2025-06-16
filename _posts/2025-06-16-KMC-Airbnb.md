@@ -64,7 +64,7 @@ plt.show()
 
 아래는 K-means Clustering으로 Airbnb 숙소 데이터를 군집화한 결과입니다.
 
-![image]([https://github.com/user-attachments/assets/37b09696-986d-4033-9570-462b6b1550d9](https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif))
+![image](https://github.com/user-attachments/assets/7958dcd2-8e58-41f5-a40f-f641c4409ad9](https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif)
 
 
 > **그림:** K-means 군집화 시각화 예시  
