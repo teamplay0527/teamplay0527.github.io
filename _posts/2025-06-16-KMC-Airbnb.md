@@ -113,7 +113,7 @@ plt.xlabel('Booking Frequency')
 plt.ylabel('Stay Duration')
 plt.savefig('images/clusters.png')
 plt.show()
-
+```
 
 
 # 📊 Airbnb 고객 세분화 분석 결과 및 해석
@@ -139,32 +139,6 @@ plt.show()
 | Cluster 0 | 예약 빈도 낮음, 숙박 일수 짧음 | 단기 출장자, 도심 근처 선호 |
 | Cluster 1 | 예약 빈도 높음, 숙박 일수 김 | 장기 체류자 (디지털 노마드 등), 도심 외곽 선호 |
 | Cluster 2 | 중간 수준의 예약 및 숙박 | 평균적인 일반 사용자군 |
-
----
-
-## 📌 클러스터 통계 요약
-
-```
-클러스터별 평균값 예시:
-
-Cluster 0
-- booking_freq: 1.2회
-- stay_duration: 3.5일
-- room_type: 개인실 선호
-- city_center_preference: 높음
-
-Cluster 1
-- booking_freq: 5.6회
-- stay_duration: 7.8일
-- room_type: 집 전체 선호
-- city_center_preference: 중간
-
-Cluster 2
-- booking_freq: 3.0회
-- stay_duration: 5.1일
-- room_type: 혼합
-- city_center_preference: 평균
-```
 
 ---
 
