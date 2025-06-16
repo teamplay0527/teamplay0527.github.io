@@ -19,8 +19,6 @@ Airbnb는 전 세계 숙소 데이터를 기반으로 고객에게 더 나은 �
 - `price`: 숙소의 가격  
 - `minimum_nights`: 최소 숙박일수
 
-> **참고:** 실제 Airbnb 데이터는 [Inside Airbnb](http://insideairbnb.com/get-the-data.html)에서 다운로드할 수 있습니다.
-
 ---
 
 ## 3. 분석 목표
@@ -66,7 +64,7 @@ plt.show()
 
 아래는 K-means Clustering으로 Airbnb 숙소 데이터를 군집화한 결과입니다.
 
-![image](https://github.com/user-attachments/assets/37b09696-986d-4033-9570-462b6b1550d9)
+![image]([https://github.com/user-attachments/assets/37b09696-986d-4033-9570-462b6b1550d9](https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif))
 
 
 > **그림:** K-means 군집화 시각화 예시  
