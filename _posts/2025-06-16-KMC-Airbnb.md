@@ -60,6 +60,7 @@ plt.ylabel('Latitude')
 plt.title('Airbnb Listings Clustering (k=5)')
 plt.colorbar(scatter, label='Cluster')
 plt.show()
+```
 
 ## 5. 분석 결과 및 해석
 
