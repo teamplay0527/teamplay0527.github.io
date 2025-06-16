@@ -1,7 +1,7 @@
 추천주제 : K-Mean Clustering : 역사, 원리, 실용 사례
 
 - **하임경**(limkyoung.ha@lge.com)  
-- **정한영**(hanyoung1.jeoung@lge.com)  
+- **정한영**(hanyoung1.jeong@lge.com)  
 - **엄정훈**(junghoon.um@lge.com)  
 
 ---
